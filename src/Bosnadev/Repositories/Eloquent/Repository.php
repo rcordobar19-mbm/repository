@@ -119,6 +119,15 @@ abstract class Repository implements RepositoryInterface, CriteriaInterface
     {
         return $this->model->create($data);
     }
+    
+    /**
+     * Returns clean entity of model
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function entity()
+    {
+        return $this->newModel;
+    }
 
     /**
      * save a model without massive assignment
